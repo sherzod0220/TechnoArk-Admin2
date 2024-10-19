@@ -28,7 +28,7 @@ import {
     // SubCategory,
     // SingleProduct
  } from "@modules";
-import React from "react";
+// import React from "react";
 const Index = () => {
     const router = createBrowserRouter(
         createRoutesFromElements(
@@ -37,7 +37,7 @@ const Index = () => {
             <Route path="/" element={<App/>}>
                 <Route index element={<SignIn/>}/>
                 <Route path="sign-up" element={<SignUp/>}/>
-                <Route path="main/*" element={<React.Suspense fallback={<h1  className='w-screen h-screen flex justify-center items-center position-relative'><Spinner/></h1>}><MainLayout/></React.Suspense>}>
+                <Route path="main/*" element={<Layout/>}>
                     {/* <Route index element={<React.Suspense fallback={<h1  className='w-screen h-screen flex justify-center items-center position-relative'><Spinner/></h1>}><Products/></React.Suspense>}/>
                     <Route path="products/:id" element={<React.Suspense fallback={<h1  className='w-screen h-screen flex justify-center items-center position-relative'><Spinner/></h1>}><SingleProduct/></React.Suspense>}/>
                     <Route path="categories" element={<React.Suspense fallback={<h1  className='w-screen h-screen flex justify-center items-center position-relative'><Spinner/></h1>}><Categories/></React.Suspense>}/>
