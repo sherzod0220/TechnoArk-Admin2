@@ -9,6 +9,7 @@
       "@": ["./src"],
       "@modules": ["./src/modules"],
       "@api": ["./src/api"],
+      "@utils": ["./src/utils"],
       "@notification": ["./src/utils/notification"],
     },
 
