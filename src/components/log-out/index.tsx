@@ -12,8 +12,7 @@ const Index = () => {
   };
   const out = () => {
     removeData('access_token')
-    // removeDataFromCookie('refresh_token')
-    // removeDataFromCookie('admin_id')
+    removeData('id')
     navigate('/')
     window.location.reload()
   }

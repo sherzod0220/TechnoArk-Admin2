@@ -1,93 +1,24 @@
 import { useSignInMutation } from "../hooks/mutations"
-// const SignIn = () => {
-//   const {mutate} = useSignInMutation()
-//   const save =()=>{
-//     const payload = {
-//       phone_number: "+998900018776",
-//       password: "sherzod0220"
-//     }
-//     mutate(payload)
-//   }
-//   return (
-//     <div>
-//       <h1>sign-in</h1>
-//       <button onClick={save}>submit</button>
-//     </div>
-//   )
-// }
-
-// export default SignIn
-
-// import { auth } from "@service";
-// import { saveData } from "@token-service";
 import type { FormProps } from "antd";
 import { 
   Button, 
   Form, 
   Input,
-  // Spin
  } from "antd";
 import { useNavigate } from "react-router-dom";
-// import Notification from "@notification";
 import img from "../../../assets/login.svg";
-// import { useState } from "react";
 import { HappyProvider } from '@ant-design/happy-work-theme'
-// import {ReloadOutlined} from "@ant-design/icons";
-
 type FieldType = {
   phone_number: string;
   password: string;
 };
-// const loadingIcon = (
-//   <ReloadOutlined  style={{color:"white", fontSize:"22px"}} spin/>
-// )
 const Index = () => {
   const {mutate} = useSignInMutation()
   const navigate = useNavigate();
-  // const [loading,setLoading] = useState(false)
   const onFinish: FormProps<FieldType>["onFinish"] = async (values) => {
-    // setLoading(true)
-    // try {
-    //   const response: any = await auth.sign_in(values);
-    //   if (response && response.status === 201) {
-    //     Notification({
-    //       title: "Login successfully!",
-    //       type: "success",
-    //     });
-    //     const data = response.data?.data;
-    //     if (data && data.tokens && data.tokens.access_token) {
-    //       const {
-    //         tokens: { access_token },
-    //       } = data;
-    //       localStorage.setItem("access_token", access_token)
-    //       // saveData("access_token", access_token);
-    //       // saveData("id", data?.data?.id);
-    //       navigate("/main");
-    //       console.log(response,"response");
-    //       console.log(data.data.id, "tokedata");
-    //     } else {
-    //       console.error(
-    //         "Tokens or access_token is missing in the response data"
-    //       );
-    //       Notification({
-    //         type: "error",
-    //         title: 'Tokens or access_token is missing in the response data'
-    //       })
-    //     }
-    //   } else {
-    //     console.error(`Unexpected response status: ${response?.status}`);
-    //     Notification({type: "error",title: `Erro!  Unexpected response status: ${response?.status}`})
-    //   }
-    // } catch (error) {
-    //   console.error("Error during sign-in:", error);
-    //     Notification({type: "error",title: `incorrect phone number or password, try again, Error during sign-in: ${error}`})
-    // } finally{
-    //   setLoading(false)
-    // }
     const response: any = mutate(values)
     console.log(response);
   };
-
   const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (
     errorInfo
   ) => {
@@ -98,7 +29,6 @@ const Index = () => {
   };
   return (
     <>
-        {/* <ToastContainer/> */}
       <div className="flex h-[100vh]">
         <div className="w-[50%] flex justify-center items-center bg-[#fffef2]">
           <img src={img} alt="" className="w-[50%]" />
@@ -106,8 +36,6 @@ const Index = () => {
         <div className="w-[50%] flex justify-center items-center gap-[20px] flex-col px-[50px]">
           <Form
             name="basic"
-            // labelCol={{ span: 8 }}
-            // wrapperCol={{ span: 16 }}
             style={{ maxWidth: 400, width: "100%" }}
             initialValues={{ remember: true }}
             onFinish={onFinish}
@@ -145,9 +73,7 @@ const Index = () => {
                 className="py-[20px] text-[18px]"
                 htmlType="submit"
                 style={{ background: "#d55200", width: "100%" }}
-                // disabled={loading}
               >
-                {/* {loading ? <Spin indicator={loadingIcon}/> : "Login"} */}
                 Login
               </Button>
               </HappyProvider>

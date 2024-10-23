@@ -18,13 +18,13 @@ import {
     SignIn,
     SignUp,
     Layout,
-    // Products,
-    // Categories,
-    // Brands,
-    // BrandCategories,
-    // Ads,
-    // Stock,
-    // Setting,
+    Products,
+    Categories,
+    Brands,
+    BrandCategories,
+    Ads,
+    Stock,
+    Setting,
     // SubCategory,
     // SingleProduct
  } from "@modules";
@@ -38,6 +38,13 @@ const Index = () => {
                 <Route index element={<SignIn/>}/>
                 <Route path="sign-up" element={<SignUp/>}/>
                 <Route path="main/*" element={<Layout/>}>
+                    <Route index element={<Products/>}/>
+                    <Route path="categories" element={<Categories/>}/>
+                    <Route path="brands" element={<Brands/>}/>
+                    <Route path="brand-categories" element={<BrandCategories/>}/>
+                    <Route path="ads" element={<Ads/>}/>
+                    <Route path="stock" element={<Stock/>}/>
+                    <Route path="setting" element={<Setting/>}/>
                     {/* <Route index element={<React.Suspense fallback={<h1  className='w-screen h-screen flex justify-center items-center position-relative'><Spinner/></h1>}><Products/></React.Suspense>}/>
                     <Route path="products/:id" element={<React.Suspense fallback={<h1  className='w-screen h-screen flex justify-center items-center position-relative'><Spinner/></h1>}><SingleProduct/></React.Suspense>}/>
                     <Route path="categories" element={<React.Suspense fallback={<h1  className='w-screen h-screen flex justify-center items-center position-relative'><Spinner/></h1>}><Categories/></React.Suspense>}/>
