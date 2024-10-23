@@ -9,9 +9,10 @@ export default defineConfig({
       { find: "@", replacement: "/src/*"},
       { find: "@modules", replacement: "/src/modules"},
       { find: "@api", replacement: "/src/api"},
-      {find: "@notification", replacement: "/src/utils/notification"},
       { find: "@utils", replacement: "/src/utils"},
-      // { find: "@types", replacement: "/src/types"},
+      { find: "@notification", replacement: "/src/utils/notification"},
+      { find: "@token-service", replacement: "/src/utils/token-service"},
+      { find: "@components", replacement: "/src/components"},
     ]
   }
 })

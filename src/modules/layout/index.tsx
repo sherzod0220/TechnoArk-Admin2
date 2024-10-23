@@ -7,7 +7,7 @@ import { Button, Layout, Menu, theme } from 'antd';
 import { NavLink, Outlet,useLocation } from "react-router-dom";
 import { routes } from '../../routes/router';
 import logo from '../../assets/logo.svg'
-// import { Logout } from "@modals";
+import { Logout }  from "@components";
 
 const { Header, Sider, Content } = Layout;
 
@@ -85,7 +85,7 @@ const App: React.FC = () => {
                     height: 64,
                   }}
                 />
-                {/* <Logout/> */}
+                <Logout/>
             </div>
         </Header>
         <Content
