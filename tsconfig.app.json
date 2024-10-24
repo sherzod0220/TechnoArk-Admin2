@@ -13,6 +13,7 @@
       "@notification": ["./src/utils/notification"],
       "@token-service": ["./src/utils/token-service"],
       "@components": ["./src/components"],
+      "@types": ["./src/types"],
     },
 
     /* Bundler mode */

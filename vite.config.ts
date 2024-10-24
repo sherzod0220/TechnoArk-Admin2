@@ -13,6 +13,7 @@ export default defineConfig({
       { find: "@notification", replacement: "/src/utils/notification"},
       { find: "@token-service", replacement: "/src/utils/token-service"},
       { find: "@components", replacement: "/src/components"},
+      { find: "@types", replacement: "/src/types"},
     ]
   }
 })

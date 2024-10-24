@@ -1,3 +1,5 @@
 import Logout from './log-out'
+import Table from './global-table'
+import Search from './search'
 
-export { Logout }
+export { Logout, Table, Search }
