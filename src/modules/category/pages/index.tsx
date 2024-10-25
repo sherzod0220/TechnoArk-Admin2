@@ -4,9 +4,12 @@ import { Space, Tooltip, Button } from "antd";
 import { EditOutlined,ArrowsAltOutlined } from "@ant-design/icons";
 import { Search, Table } from "@components";
 import { useLocation, useNavigate } from "react-router-dom";
+import Category from "./modal";
 
 const Index = () => {
 
+  const [category,setCategory] = useState({})
+  const [open,setOpen] = useState(false)
   const location = useLocation()
   const val = new URLSearchParams(location.search)
   const [ params,setParams   ] = useState({
@@ -14,12 +17,11 @@ const Index = () => {
     page: 1,
     search: val.get('search') ||'',
   })
-  // const [total, setTotal] = useState(0); // To store the total number of items
 
+  // const [total, setTotal] = useState(0); // To store the total number of items
     const { data } = useGetCategory(params)
     const { categories,count} = data || {}
     console.log(data,"data");
-    
     // const datas =  data?.data?.categories;
     // console.log(datas,"das");
     const navigate = useNavigate();
@@ -52,6 +54,15 @@ const Index = () => {
          navigate(`?${searchParams}`)
     };
 
+    const openModal =(item:any)=>{  
+      setCategory(item)
+      setOpen(true)
+    }
+    const handleCancel =()=>{
+      setCategory({})
+      setOpen(false)
+    }
+
 
     const columns: any = [
       { 
@@ -73,7 +84,7 @@ const Index = () => {
               <Button
                 type="default"
                 icon={<EditOutlined/>}
-                // onClick={()=>openModal(record)}
+                onClick={()=>openModal(record)}
                 style={{width:"45px", color:"green", borderColor:"green"}}
               />
             </Tooltip>
@@ -103,6 +114,7 @@ const Index = () => {
     ];
   return (
     <div>
+      <Category open={open} handleCancel={handleCancel} category={category}/>
       <div className="flex justify-between items-center">
         <span className="w-[300px]">
             <Search params={params} setParams={setParams}/>

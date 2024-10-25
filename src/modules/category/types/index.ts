@@ -1,5 +1,4 @@
-export interface ParamsTypes {
-    search: string,
-    limit: string,
-    page: string,
+export interface CategoryType {
+    name: string,
+    id?: number,
 }
