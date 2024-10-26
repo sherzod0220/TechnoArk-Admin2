@@ -6,12 +6,13 @@ import {
   Input,
  } from "antd";
 import { useNavigate } from "react-router-dom";
-import img from "../../../assets/login.svg";
+// import img from "../../../assets/login.svg";
 import { HappyProvider } from '@ant-design/happy-work-theme'
 type FieldType = {
-  phone_number: string;
+  username: string;
   password: string;
 };
+import './signin.scss'
 const Index = () => {
   const {mutate} = useSignInMutation()
   const navigate = useNavigate();
@@ -29,11 +30,11 @@ const Index = () => {
   };
   return (
     <>
-      <div className="flex h-[100vh]">
-        <div className="w-[50%] flex justify-center items-center bg-[#fffef2]">
+      <div className="flex h-[100vh] justify-center items-center signin-box">
+        {/* <div className="w-[50%] flex justify-center items-center">
           <img src={img} alt="" className="w-[50%]" />
-        </div>
-        <div className="w-[50%] flex justify-center items-center gap-[20px] flex-col px-[50px]">
+        </div> */}
+        <div className="w-[50%] h-[80vh] flex justify-center items-center gap-[20px] flex-col px-[50px] bg-[#ffffff74] backdrop-blur-[8px]">
           <Form
             name="basic"
             style={{ maxWidth: 400, width: "100%" }}
@@ -46,8 +47,8 @@ const Index = () => {
           >
             <label className="text-[35px] font-semibold ">Login</label>
             <Form.Item<FieldType>
-              label="Phone number"
-              name="phone_number"
+              label="Username"
+              name="username"
               rules={[
                 { required: true, message: "Please input your username!" },
               ]}
@@ -72,7 +73,7 @@ const Index = () => {
                 type="primary"
                 className="py-[20px] text-[18px]"
                 htmlType="submit"
-                style={{ background: "#d55200", width: "100%" }}
+                style={{ width: "100%" }}
               >
                 Login
               </Button>

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance: any = axios.create({
-    baseURL: "https://texnoark.ilyosbekdev.uz/"
+    baseURL: "https://auth.solihov.uz/"
 })
 
 axiosInstance.interceptors.request.use((config: any): any => {

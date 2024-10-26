@@ -1,4 +1,4 @@
 export interface SignIn {
-    phone_number: string;
+    username: string;
     password: string;
 }

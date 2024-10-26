@@ -9,12 +9,16 @@ export function useSignInMutation() {
     return useMutation({
         mutationFn: (data:SignIn) => signIn(data),
         onSuccess:(response) =>{
-          const { access_token } = response?.data?.data?.tokens;          
-          const { id } = response?.data?.data?.data;
+          console.log(response,"res");
+          
+          const { AccessToken } = response?.data;          
+          // const { id } = response?.data?.data?.data;
+          
+          
           // localStorage.setItem("access_token", access_token)          
           // localStorage.setItem("id",id)
-          saveData("access_token", access_token);
-          saveData("id", id);
+          saveData("access_token", AccessToken);
+          // saveData("id", id);
           Notification({
             type: "success",
             message: response?.data?.message

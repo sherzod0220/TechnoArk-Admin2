@@ -58,7 +58,7 @@ const App: React.FC = () => {
             style={{ width: collapsed ? "40px" : "48px" }}
           />
           {!collapsed && (
-            <h1 className='text-[22px] text-[#d55200] font-extrabold'>EXNOARK</h1>
+            <h1 className='text-[22px] text-[white] font-extrabold italic'>Nasiya Savdo</h1>
           )}
         </div>        
         <Menu
