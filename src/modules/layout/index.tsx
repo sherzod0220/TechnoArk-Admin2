@@ -6,7 +6,7 @@ import {
 import { Button, Layout, Menu, theme } from 'antd';
 import { NavLink, Outlet,useLocation } from "react-router-dom";
 import { routes } from '../../routes/router';
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/nslogo.jpg'
 import { Logout }  from "@components";
 
 const { Header, Sider, Content } = Layout;
@@ -56,6 +56,7 @@ const App: React.FC = () => {
             src={logo}
             alt="Main Logo"
             style={{ width: collapsed ? "40px" : "48px" }}
+            className='rounded-[10px]'
           />
           {!collapsed && (
             <h1 className='text-[22px] text-[white] font-extrabold italic'>Nasiya Savdo</h1>

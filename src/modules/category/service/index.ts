@@ -1,11 +1,11 @@
-import axiosInstance from '@api';
+import axiosInstance from '@config';
 import { IParams } from '@types'
 import { CategoryType } from '../types';
 
 // ======== GET ========
 export const getCategory = async(params:IParams) => {
-    const response = await axiosInstance.get("category/search", { params })
-    return response?.data?.data
+    const response = await axiosInstance.get("product/list", { params })
+    return response
 }
 
 // ============= CREATE ============

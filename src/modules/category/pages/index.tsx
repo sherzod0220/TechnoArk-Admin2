@@ -20,7 +20,9 @@ const Index = () => {
 
   // const [total, setTotal] = useState(0); // To store the total number of items
     const { data } = useGetCategory(params)
-    const { categories,count} = data || {}
+    const { all_products,count} = data?.data || {}
+    console.log(all_products);
+    
     console.log(data,"data");
     // const datas =  data?.data?.categories;
     // console.log(datas,"das");
@@ -126,7 +128,7 @@ const Index = () => {
         </div>
       </div>
       <Table
-        data={categories}
+        data={all_products}
         columns={columns}
         pagination={{
           current: params.page,

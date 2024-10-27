@@ -9,6 +9,7 @@
       "@": ["./src"],
       "@modules": ["./src/modules"],
       "@api": ["./src/api"],
+      "@config": ["./src/config"],
       "@utils": ["./src/utils"],
       "@notification": ["./src/utils/notification"],
       "@token-service": ["./src/utils/token-service"],
