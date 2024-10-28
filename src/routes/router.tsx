@@ -3,15 +3,15 @@ import {
     TagsOutlined,
     ProductOutlined,
     SettingOutlined,
-    KubernetesOutlined,
+    // KubernetesOutlined,
     StockOutlined
   } from "@ant-design/icons";
 
   export const routes = [
     {
-      title: "User",
-      path: "/main/users",
-      icon: <TagsOutlined style={{fontSize: "22px"}}/>,
+      title: "Charts",
+      path: "/main/chart",
+      icon: <StockOutlined style={{fontSize: "22px"}}/>,
     },
     {
       title: "Products",
@@ -19,24 +19,14 @@ import {
       icon: <ProductOutlined style={{fontSize: "22px"}}/>,
     },
     {
-      title: "Charts",
-      path: "/main/chart",
-      icon: <AppstoreOutlined style={{fontSize: "22px"}}/>,
-    },
-    {
       title: "Contracts",
       path: "/main/contract",
       icon: <AppstoreOutlined style={{fontSize: "22px"}}/>,
     },
     {
-      title: "Ads",
-      path: "/main/ads",
-      icon: <KubernetesOutlined style={{fontSize: "22px"}}/>,
-    },
-    {
-      title: "Stock",
-      path: "/main/stock",
-      icon: <StockOutlined style={{fontSize: "22px"}}/>,
+      title: "User",
+      path: "/main/users",
+      icon: <TagsOutlined style={{fontSize: "22px"}}/>,
     },
     {
       title: "Setting",

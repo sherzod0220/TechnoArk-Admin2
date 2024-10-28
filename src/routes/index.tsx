@@ -22,8 +22,6 @@ import {
     Charts,
     Users,
     Contract,
-    // Ads,
-    Stock,
     Setting,
     // SubCategory,
     // SingleProduct
@@ -42,8 +40,6 @@ const Index = () => {
                     <Route path="chart" element={<Charts/>}/>
                     <Route path="users" element={<Users/>}/>
                     <Route path="contract" element={<Contract/>}/>
-                    {/* <Route path="ads" element={<Ads/>}/> */}
-                    <Route path="stock" element={<Stock/>}/>
                     <Route path="setting" element={<Setting/>}/>
                     {/* <Route index element={<React.Suspense fallback={<h1  className='w-screen h-screen flex justify-center items-center position-relative'><Spinner/></h1>}><Products/></React.Suspense>}/>
                     <Route path="products/:id" element={<React.Suspense fallback={<h1  className='w-screen h-screen flex justify-center items-center position-relative'><Spinner/></h1>}><SingleProduct/></React.Suspense>}/>
