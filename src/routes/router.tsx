@@ -1,9 +1,8 @@
 import {
-    AppstoreOutlined,
-    TagsOutlined,
     ProductOutlined,
     SettingOutlined,
-    // KubernetesOutlined,
+    SnippetsOutlined,
+    UserOutlined,
     StockOutlined
   } from "@ant-design/icons";
 
@@ -21,12 +20,12 @@ import {
     {
       title: "Contracts",
       path: "/main/contract",
-      icon: <AppstoreOutlined style={{fontSize: "22px"}}/>,
+      icon: <SnippetsOutlined style={{fontSize: "22px"}}/>,
     },
     {
       title: "User",
       path: "/main/users",
-      icon: <TagsOutlined style={{fontSize: "22px"}}/>,
+      icon: <UserOutlined style={{fontSize: "22px"}}/>,
     },
     {
       title: "Setting",

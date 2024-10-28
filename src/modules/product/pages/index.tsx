@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useGetCategory } from "../hooks/queries"
 import { Space, Tooltip, Button,Image } from "antd";
-import { EditOutlined,ArrowsAltOutlined } from "@ant-design/icons";
+import { EditOutlined,EyeOutlined } from "@ant-design/icons";
 import { Search, Table } from "@components";
 import { useLocation, useNavigate } from "react-router-dom";
 import Category from "./modal";
@@ -132,7 +132,7 @@ const Index = () => {
             <Tooltip title="View">
               <Button
                 type="default"
-                icon={<ArrowsAltOutlined />}
+                icon={<EyeOutlined />}
                 // onClick={() => moveSingle(record.id)}
                 style={{width:"45px"}}
               />
