@@ -19,8 +19,8 @@ import {
       icon: <AppstoreOutlined style={{fontSize: "22px"}}/>,
     },
     {
-      title: "Brands",
-      path: "/main/brands",
+      title: "User",
+      path: "/main/users",
       icon: <TagsOutlined style={{fontSize: "22px"}}/>,
     },
     {

@@ -20,7 +20,7 @@ import {
     Layout,
     Products,
     Categories,
-    Brands,
+    Users,
     BrandCategories,
     // Ads,
     Stock,
@@ -40,7 +40,7 @@ const Index = () => {
                 <Route path="main/*" element={<Layout/>}>
                     <Route index element={<Products/>}/>
                     <Route path="categories" element={<Categories/>}/>
-                    <Route path="brands" element={<Brands/>}/>
+                    <Route path="users" element={<Users/>}/>
                     <Route path="brand-categories" element={<BrandCategories/>}/>
                     {/* <Route path="ads" element={<Ads/>}/> */}
                     <Route path="stock" element={<Stock/>}/>
