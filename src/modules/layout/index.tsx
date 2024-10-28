@@ -38,7 +38,7 @@ const App: React.FC = () => {
         collapsed={collapsed}
         style={{
             minHeight: "100vh",
-            width: "400px",
+            // width: "400px",
             overflow: "auto",
           }}
         width={250}  

@@ -9,23 +9,23 @@ import {
 
   export const routes = [
     {
-      title: "Products",
-      path: "/main",
-      icon: <ProductOutlined style={{fontSize: "22px"}}/>,
-    },
-    {
-      title: "Categories",
-      path: "/main/categories",
-      icon: <AppstoreOutlined style={{fontSize: "22px"}}/>,
-    },
-    {
       title: "User",
       path: "/main/users",
       icon: <TagsOutlined style={{fontSize: "22px"}}/>,
     },
     {
-      title: "Brand Categories",
-      path: "/main/brand-categories",
+      title: "Products",
+      path: "/main",
+      icon: <ProductOutlined style={{fontSize: "22px"}}/>,
+    },
+    {
+      title: "Charts",
+      path: "/main/chart",
+      icon: <AppstoreOutlined style={{fontSize: "22px"}}/>,
+    },
+    {
+      title: "Contracts",
+      path: "/main/contract",
       icon: <AppstoreOutlined style={{fontSize: "22px"}}/>,
     },
     {

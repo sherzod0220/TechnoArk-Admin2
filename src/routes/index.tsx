@@ -19,9 +19,9 @@ import {
     SignUp,
     Layout,
     Products,
-    Categories,
+    Charts,
     Users,
-    BrandCategories,
+    Contract,
     // Ads,
     Stock,
     Setting,
@@ -39,9 +39,9 @@ const Index = () => {
                 <Route path="sign-up" element={<SignUp/>}/>
                 <Route path="main/*" element={<Layout/>}>
                     <Route index element={<Products/>}/>
-                    <Route path="categories" element={<Categories/>}/>
+                    <Route path="chart" element={<Charts/>}/>
                     <Route path="users" element={<Users/>}/>
-                    <Route path="brand-categories" element={<BrandCategories/>}/>
+                    <Route path="contract" element={<Contract/>}/>
                     {/* <Route path="ads" element={<Ads/>}/> */}
                     <Route path="stock" element={<Stock/>}/>
                     <Route path="setting" element={<Setting/>}/>
