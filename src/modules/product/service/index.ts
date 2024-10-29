@@ -10,7 +10,7 @@ export const getCategory = async(params:IParams) => {
 
 // ============= CREATE ============
 export const createCategory = async (data: CategoryType) => {
-    const response =  await axiosInstance.post("category/create", data)
+    const response =  await axiosInstance.post("product/create", data)
     return response?.data
 }
 

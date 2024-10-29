@@ -34,7 +34,7 @@ const Index = () => {
         {/* <div className="w-[50%] flex justify-center items-center">
           <img src={img} alt="" className="w-[50%]" />
         </div> */}
-        <div className="w-[50%] h-[80vh] flex justify-center items-center gap-[20px] flex-col px-[50px] bg-[#ffffff74] backdrop-blur-[8px]">
+        <div className="w-[600px] py-[50px] flex justify-center items-center gap-[20px] flex-col px-[50px] bg-[#ffffff74] backdrop-blur-[18px] border-[darkblue] border-[2px]">
           <Form
             name="basic"
             style={{ maxWidth: 400, width: "100%" }}

@@ -4,7 +4,7 @@ import { Space, Tooltip, Button,Image } from "antd";
 import { EditOutlined,EyeOutlined } from "@ant-design/icons";
 import { Search, Table } from "@components";
 import { useLocation, useNavigate } from "react-router-dom";
-import Category from "./modal";
+import Action from "./modal";
 
 const Index = () => {
 
@@ -143,7 +143,7 @@ const Index = () => {
     ];
   return (
     <div>
-      <Category open={open} handleCancel={handleCancel} category={category}/>
+      <Action open={open} handleCancel={handleCancel} update={category}/>
       <div className="flex justify-between items-center">
         <span className="w-[300px]">
             <Search params={params} setParams={setParams}/>
