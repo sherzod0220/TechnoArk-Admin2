@@ -6,7 +6,7 @@ import {
   Input,
  } from "antd";
 import { useNavigate } from "react-router-dom";
-// import img from "../../../assets/login.svg";
+// import img from "../../../assets/Bg IMage.svg";
 import { HappyProvider } from '@ant-design/happy-work-theme'
 type FieldType = {
   username: string;
@@ -31,9 +31,9 @@ const Index = () => {
   return (
     <>
       <div className="flex h-[100vh] justify-center items-center signin-box">
-        {/* <div className="w-[50%] flex justify-center items-center">
-          <img src={img} alt="" className="w-[50%]" />
-        </div> */}
+          {/* <div className="w-[50%] flex justify-center items-center">
+            <img src={img} alt="" className="w-[50%]" />
+          </div> */}
         <div className="w-[600px] py-[50px] flex justify-center items-center gap-[20px] flex-col px-[50px] bg-[#ffffff74] backdrop-blur-[18px] border-[darkblue] border-[2px]">
           <Form
             name="basic"
