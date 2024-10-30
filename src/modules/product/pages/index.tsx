@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useGetCategory } from "../hooks/queries"
 import { Space, Tooltip, Button,Image } from "antd";
 import { EditOutlined,EyeOutlined } from "@ant-design/icons";
-import { Search, Table } from "@components";
+import { GlobalDelete, Search, Table } from "@components";
 import { useLocation, useNavigate } from "react-router-dom";
 import Action from "./modal";
 
@@ -21,9 +21,9 @@ const Index = () => {
   // const [total, setTotal] = useState(0); // To store the total number of items
     const { data } = useGetCategory(params)
     const { all_products,count} = data?.data || {}
-    console.log(all_products);
+    // console.log(all_products);
     
-    console.log(data,"data");
+    // console.log(data,"data");
     // const datas =  data?.data?.categories;
     // console.log(datas,"das");
     const navigate = useNavigate();
@@ -64,6 +64,10 @@ const Index = () => {
       setCategory({})
       setOpen(false)
     }
+
+    const deleteData = async (id: number) => {
+      console.log(id,"id");
+    };
 
 
     const columns: any = [
@@ -120,13 +124,12 @@ const Index = () => {
   
             <Tooltip title="Delete">
              
-              {/* <GlobalDelete
+              <GlobalDelete
                 id={record.id}
                 onConfirm={deleteData}
                 onCancel={() => console.log('Cancelled')}
                 title={"Delete this Category ?"}
-              /> */}
-              <h1>delete</h1>
+              />
             </Tooltip>
   
             <Tooltip title="View">

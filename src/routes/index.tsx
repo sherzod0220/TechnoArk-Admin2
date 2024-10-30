@@ -17,6 +17,7 @@ import App from "../App";
 import { 
     SignIn,
     SignUp,
+    Verification,
     Layout,
     Products,
     Charts,
@@ -35,6 +36,7 @@ const Index = () => {
             <Route path="/" element={<App/>}>
                 <Route index element={<SignIn/>}/>
                 <Route path="sign-up" element={<SignUp/>}/>
+                <Route path="verification" element={<Verification/>}/>
                 <Route path="main/*" element={<Layout/>}>
                     <Route index element={<Products/>}/>
                     <Route path="chart" element={<Charts/>}/>
