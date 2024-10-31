@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { Notification } from "@notification";
 import { CategoryType } from '../types';
-import { createCategory, updateCategory } from '../service';
+import { createCategory, deleteProduct, updateCategory } from '../service';
 
 // ====== Create Category ======
 
@@ -50,4 +50,24 @@ export function useUpdateCategory() {
             }
         }
     })
+}
+
+// ========== DELETE ==========
+export function useDeleteProduct() {
+    const queryClient = useQueryClient()
+    return useMutation({
+        mutationFn: (id: number) => deleteProduct(id),
+        onSuccess: (response) => {
+            console.log(response);
+            
+            // Notification('success', response?.message?)
+        },
+        onSettled: (_, error) => {
+            if (error) {
+                // Notification('error', error?.message)
+            } else {
+                queryClient.invalidateQueries({ queryKey: ["all_products"] })
+            }
+        }
+    });
 }

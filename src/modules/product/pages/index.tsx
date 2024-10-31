@@ -4,10 +4,12 @@ import { Space, Tooltip, Button,Image } from "antd";
 import { EditOutlined,EyeOutlined } from "@ant-design/icons";
 import { GlobalDelete, Search, Table } from "@components";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useDeleteProduct } from "../hooks/mutation";
 import Action from "./modal";
 
 const Index = () => {
 
+  const {mutate} = useDeleteProduct()
   const [category,setCategory] = useState({})
   const [open,setOpen] = useState(false)
   const location = useLocation()
@@ -66,8 +68,11 @@ const Index = () => {
     }
 
     const deleteData = async (id: number) => {
-      console.log(id,"id");
+      // console.log(id,"id");
+      const response: any = mutate(id)
+      console.log(response);
     };
+    
 
 
     const columns: any = [

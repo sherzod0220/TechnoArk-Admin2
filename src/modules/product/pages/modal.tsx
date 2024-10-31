@@ -17,7 +17,6 @@ const UpdateCreateCategoryModal = ({ open, handleCancel, update }:PropType) => {
   const [form] = Form.useForm();
   const { mutate: createMutate, isPending: isCreateing } = useCreateCategory()
     const { mutate: updateMutate, isPending: isUpdating } = useUpdateCategory()
-//   console.log(category, 'category')
   useEffect(() => {
     if (update.name) {
       form.setFieldsValue({
