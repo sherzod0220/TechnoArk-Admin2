@@ -6,7 +6,6 @@ import {
   Input,
  } from "antd";
 // import { useNavigate } from "react-router-dom";
-// import img from "../../../assets/login.svg";
 import { HappyProvider } from '@ant-design/happy-work-theme'
 type FieldType = {
   email: string;
