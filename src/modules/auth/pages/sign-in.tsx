@@ -32,7 +32,7 @@ const Index = () => {
   return (
     <>
       <div className="flex h-[100vh] justify-center items-center signin-box box">
-          <div className="w-[50%] px-[50px] text-center flex flex-col justify-center items-center h-[100%] bg-[#40404074] backdrop-blur-[5px]">
+          <div className="w-[50%] px-[50px] text-center flex flex-col justify-center items-center h-[100%] bg-[#40404074] backdrop-blur-[10px]">
             {/* <img src={img} alt="" className="w-[50%]" /> */}
             <h1 className="text-[56px] font-bold text-[white]">
               Welcome Back!
