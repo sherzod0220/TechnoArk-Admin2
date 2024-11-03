@@ -28,7 +28,7 @@ const Index = () => {
   return (
     <>
       <div className="flex h-[100vh] justify-center items-center signin-box box">
-        <div className="w-[100%] h-[100%] py-[50px] flex justify-center items-center gap-[20px] flex-col px-[50px] bg-[#0000008e] backdrop-blur-[3px]">
+        <div className="w-[100%] h-[100%] py-[50px] flex justify-center items-center gap-[20px] flex-col px-[50px] bg-[#0000008e] backdrop-blur-[5px]">
           <div className="w-[700px] bg-sky-50 px-[50px] py-[100px] rounded-[30px]">
           <Form
             name="basic"
