@@ -44,7 +44,7 @@ const Index = () => {
               Register with your personal details to use all of site features.
             </h1>
           </div>
-        <div className="w-[50%] h-[100%] flex justify-center items-center gap-[20px] flex-col px-[50px] bg-[#00000074] backdrop-blur-[3px]">
+        <div className="w-[50%] h-[100%] flex justify-center items-center gap-[20px] flex-col px-[50px] bg-[#00000074] backdrop-blur-[2px]">
           <div className="w-[700px] bg-sky-50 px-[50px] py-[50px] rounded-[30px]">
           <Form
             name="basic
